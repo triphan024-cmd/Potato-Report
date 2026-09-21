@@ -24,53 +24,13 @@
 <body>
     <div class="dashboard-container" id="main-dashboard-container">
         
-        <!-- Sidebar - Icon Navigator -->
-        <aside class="sidebar" id="sidebar">
-            <button id="close-sidebar-btn" class="close-sidebar-btn" aria-label="Close menu">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            
-            <ul class="nav-menu">
-                <li class="nav-item active">
-                    <a href="#achievement">
-                        <i class="fa-solid fa-trophy"></i>
-                        <span>Thành tựu</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#challenge">
-                        <i class="fa-solid fa-bolt"></i>
-                        <span>Thách thức</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#action">
-                        <i class="fa-solid fa-rocket"></i>
-                        <span>Kế hoạch 3 tháng</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#vision">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>Tầm nhìn & Tri ân</span>
-                    </a>
-                </li>
-            </ul>
-        </aside>
-
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Mobile Toggle Button -->
-            <button id="mobile-menu-btn" class="mobile-nav-btn" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
             <div class="content-wrapper">
                 
                 <!-- Brand Header -->
                 <header class="brand-header">
                     <img src="https://www.appsheet.com:443/fsimage.png?appid=35e5f9f7-248a-4eb4-a87e-672f26329edc&datasource=google&filename=DocId%3D17DO_wZowyRRcJ2RwJgieoOk-8rNKqraq&signature=531e139f3b6b655d2c117ff2508266b82e3eb3c280f0e627e9890cb549161cc8&tableprovider=google&userid=113051404" alt="Potato English Logo" class="page-logo">
-                    <p class="brand-subline">POTATO ENGLISH CENTER • VƯƠN TẦM BỨT PHÁ</p>
                 </header>
 
                 <!-- Page Title & Subtitle -->
@@ -80,6 +40,26 @@
                         "Nhìn lại hành trình từ đầu năm Kick off đến đợt <b>9 Months Review</b> vừa qua, tập thể chúng ta đã xử lý một khối lượng công việc khổng lồ và đạt được những bước chuyển đổi rất đáng tự hào."
                     </p>
                 </section>
+
+                <!-- Button Navigator (Đặt ở giữa trang thay vì trên top/bên trái) -->
+                <nav class="page-nav-bar" aria-label="Page Navigation">
+                    <a href="#achievement" class="nav-btn active">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span>Thành tựu</span>
+                    </a>
+                    <a href="#challenge" class="nav-btn">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Thách thức</span>
+                    </a>
+                    <a href="#action" class="nav-btn">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span>Kế hoạch 3 tháng</span>
+                    </a>
+                    <a href="#vision" class="nav-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Tầm nhìn & Tri ân</span>
+                    </a>
+                </nav>
 
                 <!-- SECTION 1: THÀNH TỰU & CỘT MỐC -->
                 <section class="info-section" id="achievement">
@@ -103,7 +83,7 @@
                                     <i class="fa-solid fa-laptop-code"></i>
                                 </div>
                                 <div>
-                                    <span class="card-category">TRỤ CỘT CÔNG NGHỆ</span>
+                                    <span class="card-category">Nâng cấp Công nghệ</span>
                                     <h3 class="card-title">Công nghệ & Vận hành</h3>
                                 </div>
                             </div>
@@ -141,11 +121,18 @@
                                 </div>
                                 <div>
                                     <span class="card-category">CHUẨN MỰC ĐÀO TẠO</span>
-                                    <h3 class="card-title">Học thuật (Academic)</h3>
+                                    <h3 class="card-title">Chất lượng giảng dạy</h3>
                                 </div>
                             </div>
 
                             <div class="card-body">
+                                <div class="feature-item">
+                                    <div class="feature-chip chip-cyan">TEACHER TRAINING</div>
+                                    <p class="feature-text">
+                                        Nâng cao bồi dưỡng chất lượng giáo viên.
+                                    </p>
+                                </div>
+
                                 <div class="feature-item">
                                     <div class="feature-chip chip-purple">TEACHER PLAYBOOK</div>
                                     <p class="feature-text">
@@ -437,16 +424,13 @@
 
     <!-- Script -->
     <script>
-        // Smooth scroll & Active state tracking
-        document.querySelectorAll('.nav-menu a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // Smooth scroll & Active state tracking for Page Nav Bar
+        const navButtons = document.querySelectorAll('.page-nav-bar .nav-btn');
+        const sections = document.querySelectorAll('section[id]');
+
+        navButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                this.parentElement.classList.add('active');
-                
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
                 
@@ -455,69 +439,33 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                }
-
-                // Close mobile menu if open
-                const sidebar = document.getElementById('sidebar');
-                if (sidebar && sidebar.classList.contains('show')) {
-                    sidebar.classList.remove('show');
+                    navButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
                 }
             });
         });
 
-        // Highlight active menu on scroll inside main-content
-        const sections = document.querySelectorAll('section[id]');
-        const navItems = document.querySelectorAll('.nav-item');
-
+        // Scrollspy to highlight active navigator button
         window.addEventListener('scroll', () => {
             let current = '';
-            const scrollContainer = document.querySelector('.main-content');
-            const scrollY = scrollContainer ? scrollContainer.scrollTop : 0;
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 180) {
+                if (scrollY >= sectionTop - 220) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                const link = item.querySelector('a');
-                if (link && link.getAttribute('href').substring(1) === current) {
-                    item.classList.add('active');
-                }
-            });
-        }, true);
-
-        // Mobile menu toggle logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', function() {
-                const sidebar = document.getElementById('sidebar');
-                if (sidebar) sidebar.classList.add('show');
-            });
-        }
-
-        const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-        if (closeSidebarBtn) {
-            closeSidebarBtn.addEventListener('click', function() {
-                const sidebar = document.getElementById('sidebar');
-                if (sidebar) sidebar.classList.remove('show');
-            });
-        }
-
-        function checkMobile() {
-            const closeBtn = document.getElementById('close-sidebar-btn');
-            if (!closeBtn) return;
-            if (window.innerWidth <= 768) {
-                closeBtn.style.display = 'block';
-            } else {
-                closeBtn.style.display = 'none';
+            if (current) {
+                navButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('href').substring(1) === current) {
+                        btn.classList.add('active');
+                    }
+                });
             }
-        }
-        window.addEventListener('resize', checkMobile);
-        checkMobile();
+        });
     </script>
 </body>
 </html>
