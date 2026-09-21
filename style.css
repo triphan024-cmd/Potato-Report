@@ -373,6 +373,16 @@ body {
     border-color: rgba(0, 174, 239, 0.3);
 }
 
+.card-emerald:hover {
+    box-shadow: 0 20px 35px -10px rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.card-orange:hover {
+    box-shadow: 0 20px 35px -10px rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
 /* Glowing Top Accent Bars */
 .card-glow-bar {
     position: absolute;
@@ -384,6 +394,7 @@ body {
 
 .bar-cyan { background: linear-gradient(90deg, #00aeef 0%, #38bdf8 100%); }
 .bar-purple { background: linear-gradient(90deg, #0090c5 0%, #00aeef 100%); }
+.bar-emerald { background: linear-gradient(90deg, #10b981 0%, #34d399 100%); }
 .bar-orange { background: linear-gradient(90deg, var(--orange-fire) 0%, #fcd34d 100%); }
 
 .card-header {
@@ -408,6 +419,7 @@ body {
 
 .box-cyan { background: var(--tech-cyan-light); color: var(--tech-cyan-dark); }
 .box-purple { background: #e0f2fe; color: #0284c7; }
+.box-emerald { background: #dcfce7; color: #059669; }
 .box-orange { background: var(--orange-light); color: var(--orange-fire-dark); }
 
 .card-category {
@@ -839,7 +851,7 @@ body {
 /* Motivation Banner inside Action 3 */
 .motivation-banner {
     display: grid;
-    grid-template-columns: 1.35fr 1fr;
+    grid-template-columns: 1.15fr 1fr;
     gap: 18px;
     margin: 18px 0 22px;
     align-items: stretch;
@@ -849,7 +861,7 @@ body {
     position: relative;
     border-radius: var(--radius-md);
     overflow: hidden;
-    min-height: 195px;
+    min-height: 220px;
     box-shadow: 0 10px 24px rgba(0, 174, 239, 0.12);
     border: 2px solid #ffffff;
     display: flex;
@@ -902,44 +914,75 @@ body {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-.motivation-stats-wrap {
+/* Right Column: Mini Stats Row + Leaders Stack (Snug layout without empty whitespace) */
+.motivation-right-column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     justify-content: space-between;
 }
 
-.motivation-stat-card {
+.motivation-mini-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.mini-stat-chip {
     background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
     border: 1.5px solid rgba(0, 174, 239, 0.18);
     border-radius: var(--radius-md);
-    padding: 12px 16px;
+    padding: 10px 8px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 14px;
+    justify-content: center;
+    text-align: center;
     transition: var(--transition-smooth);
     box-shadow: 0 4px 12px rgba(0, 174, 239, 0.04);
 }
 
-.motivation-stat-card:hover {
+.mini-stat-chip:hover {
     transform: translateY(-2px);
     border-color: var(--primary-color);
-    box-shadow: 0 8px 20px rgba(0, 174, 239, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 174, 239, 0.12);
 }
 
-.stat-num {
-    font-size: 1.6rem;
+.mini-stat-num {
+    font-size: 1.45rem;
     font-weight: 900;
     color: var(--primary-color);
-    line-height: 1;
-    min-width: 58px;
+    line-height: 1.1;
+    margin-bottom: 2px;
 }
 
-.stat-lbl {
-    font-size: 0.85rem;
+.mini-stat-lbl {
+    font-size: 0.72rem;
     font-weight: 700;
     color: var(--text-slate-700);
-    line-height: 1.35;
+    line-height: 1.25;
+}
+
+.motivation-leaders-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.motivation-leaders-stack .leader-card {
+    background: #ffffff;
+    border: 1.5px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
+    padding: 12px 16px;
+}
+
+.motivation-leaders-stack .leader-card:hover {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 174, 239, 0.12);
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -1328,8 +1371,8 @@ body {
         min-height: 180px;
     }
 
-    .leaders-spotlight-row {
-        flex-direction: column;
+    .motivation-mini-stats-row {
+        gap: 8px;
     }
 
     .action-sub-grid {
