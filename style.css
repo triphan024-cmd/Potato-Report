@@ -759,98 +759,262 @@ body {
    TRIBUTE & VISION (SECTION 4: TẦM NHÌN & LỜI TRI ÂN)
    ========================================================================== */
 .tribute-hero-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
-    border: 1px solid #bae6fd;
+    background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 50%, #fff7ed 100%);
+    border: 1.5px solid rgba(0, 174, 239, 0.2);
     border-radius: var(--radius-xl);
-    padding: 44px 38px;
-    box-shadow: 0 15px 35px rgba(0, 174, 239, 0.08);
+    padding: 38px 34px;
+    box-shadow: 0 20px 45px rgba(0, 174, 239, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
 }
 
-.tribute-gem-decor {
+/* Tribute Grid Layout */
+.tribute-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 34px;
+}
+
+/* Warm Image Wrapper */
+.tribute-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    min-height: 300px;
+    box-shadow: 0 14px 30px rgba(0, 174, 239, 0.15), 0 4px 10px rgba(0, 0, 0, 0.04);
+    border: 3px solid #ffffff;
+    display: flex;
+}
+
+.tribute-warm-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tribute-image-wrapper:hover .tribute-warm-img {
+    transform: scale(1.05);
+}
+
+.tribute-img-overlay {
     position: absolute;
-    top: 24px;
-    right: 30px;
-    font-size: 4rem;
-    color: var(--primary-color);
-    opacity: 0.1;
-    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 20px 18px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.45) 65%, transparent 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.tribute-quote-banner {
-    background: #ffffff;
-    border-left: 4px solid var(--primary-color);
-    border-radius: var(--radius-md);
-    padding: 20px 24px;
-    margin-bottom: 28px;
-    box-shadow: 0 4px 14px rgba(0, 174, 239, 0.08);
+.tribute-img-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 174, 239, 0.95);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: var(--radius-pill);
+    width: fit-content;
+    box-shadow: 0 4px 14px rgba(0, 174, 239, 0.35);
 }
 
-.tribute-quote-text {
-    font-size: 1.1rem;
+.tribute-img-caption {
+    font-size: 0.88rem;
     font-style: italic;
-    color: var(--primary-deep);
-    line-height: 1.8;
+    color: #f8fafc;
+    line-height: 1.45;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Tribute Content Wrapper */
+.tribute-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+/* Founder Tribute Box */
 .founder-tribute-box {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     align-items: flex-start;
-    margin-bottom: 28px;
+    background: #ffffff;
+    padding: 20px 22px;
+    border-radius: var(--radius-lg);
+    border: 1.5px solid rgba(0, 174, 239, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 174, 239, 0.05);
 }
 
 .founder-avatar-badge {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    background: #fef3c7;
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.2);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.25);
+    border: 2px solid #ffffff;
 }
 
-.founder-content {
-    flex-grow: 1;
+.founder-tag {
+    font-size: 0.74rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
 }
 
 .founder-title {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.22rem;
+    font-weight: 800;
     color: var(--text-slate-900);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .founder-name {
-    color: #db2777;
+    color: #e11d48;
     font-weight: 800;
 }
 
 .founder-desc {
-    font-size: 1.02rem;
-    line-height: 1.8;
+    font-size: 0.93rem;
+    line-height: 1.7;
     color: var(--text-slate-700);
+}
+
+/* Tribute Quote Banner (Keynote Speech) */
+.tribute-quote-banner {
+    background: #ffffff;
+    border-left: 5px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    box-shadow: 0 8px 22px rgba(0, 174, 239, 0.08);
+    position: relative;
+    border-top: 1px solid rgba(0, 174, 239, 0.12);
+    border-right: 1px solid rgba(0, 174, 239, 0.12);
+    border-bottom: 1px solid rgba(0, 174, 239, 0.12);
+}
+
+.quote-mark-icon {
+    font-size: 1.35rem;
+    color: var(--primary-color);
+    opacity: 0.4;
+    margin-bottom: 6px;
+}
+
+.tribute-quote-text {
+    font-size: 1.02rem;
+    font-style: italic;
+    color: var(--text-slate-900);
+    line-height: 1.75;
+}
+
+.quote-emphasis {
+    font-weight: 800;
+    color: #e11d48;
+    text-decoration: underline;
+    text-decoration-color: rgba(225, 29, 72, 0.35);
+}
+
+/* 3-Stage Journey Milestones */
+.journey-milestones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.milestone-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 22px 20px;
+    border: 1.5px solid var(--border-subtle);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+}
+
+.milestone-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 174, 239, 0.12);
+}
+
+.milestone-card.milestone-1 { border-top: 4px solid var(--amber-gold); }
+.milestone-card.milestone-2 { border-top: 4px solid var(--primary-color); }
+.milestone-card.milestone-3 { border-top: 4px solid var(--orange-fire); }
+
+.milestone-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.milestone-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.icon-amber { background: #fef3c7; color: #d97706; }
+.icon-cyan { background: #e0f2fe; color: var(--primary-color); }
+.icon-rose { background: #ffe4e6; color: #e11d48; }
+
+.milestone-step {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.milestone-title {
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: var(--text-slate-900);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.milestone-desc {
+    font-size: 0.88rem;
+    color: var(--text-slate-700);
+    line-height: 1.6;
 }
 
 /* Torch Legacy Box */
 .torch-legacy-box {
     background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-    border: 1px solid #fed7aa;
+    border: 1.5px solid #fed7aa;
     border-radius: var(--radius-lg);
     padding: 24px 28px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.1);
+    gap: 22px;
+    box-shadow: 0 10px 24px rgba(249, 115, 22, 0.12);
 }
 
 .torch-icon-circle {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     background: #ffffff;
     display: flex;
@@ -858,15 +1022,40 @@ body {
     justify-content: center;
     font-size: 1.6rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+    box-shadow: 0 6px 16px rgba(249, 115, 22, 0.25);
     animation: pulseGlow 3s ease-in-out infinite;
 }
 
+.torch-inner-content {
+    flex-grow: 1;
+}
+
 .torch-legacy-text {
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #9a3412;
     line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.torch-chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.torch-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    background: #ffffff;
+    border: 1px solid #fdba74;
+    border-radius: var(--radius-pill);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #c2410c;
+    box-shadow: 0 2px 6px rgba(249, 115, 22, 0.08);
 }
 
 /* ==========================================================================
@@ -899,6 +1088,8 @@ body {
 /* Helper Text Colors */
 .text-amber { color: var(--amber-gold); }
 .text-orange { color: var(--orange-fire); }
+.text-cyan { color: var(--primary-color); }
+.text-rose { color: #e11d48; }
 
 /* ==========================================================================
    RESPONSIVE (MOBILE & TABLET)
@@ -939,9 +1130,31 @@ body {
         flex-direction: column;
     }
 
+    .tribute-hero-card {
+        padding: 24px 18px;
+    }
+
+    .tribute-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tribute-image-wrapper {
+        min-height: 220px;
+    }
+
+    .journey-milestones-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
     .torch-legacy-box {
         flex-direction: column;
         text-align: center;
+    }
+
+    .torch-chips-row {
+        justify-content: center;
     }
 
     .brand-header .page-logo {
