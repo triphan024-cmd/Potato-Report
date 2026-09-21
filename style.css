@@ -99,22 +99,22 @@ body {
 /* Brand Header (Logo Potato ở giữa trên đầu trang để bắt đầu) */
 .brand-header {
     text-align: center;
-    margin-bottom: 28px;
-    padding-top: 6px;
+    margin-bottom: 32px;
+    padding-top: 10px;
     animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .brand-header .page-logo {
-    max-height: 52px;
+    max-height: 95px;
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.07));
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .brand-header .page-logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .nav-menu {
