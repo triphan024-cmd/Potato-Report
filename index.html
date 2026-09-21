@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Tổng Kết 9 Tháng 2026 - Potato</title>
+    <link rel="icon" type="image/png" href="https://www.appsheet.com:443/fsimage.png?appid=35e5f9f7-248a-4eb4-a87e-672f26329edc&datasource=google&filename=DocId%3D17DO_wZowyRRcJ2RwJgieoOk-8rNKqraq&signature=531e139f3b6b655d2c117ff2508266b82e3eb3c280f0e627e9890cb549161cc8&tableprovider=google&userid=113051404">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tinh chỉnh cho phù hợp với nội dung tĩnh */
+        html {
+            scroll-behavior: smooth;
+        }
+        .main-content {
+            height: 100vh;
+            overflow-y: auto;
+        }
+        /* Mobile menu toggle */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                left: -250px;
+                transition: left 0.3s ease;
+            }
+            .sidebar.show {
+                left: 0;
+            }
+            #mobile-menu-btn {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: var(--primary-color);
+                cursor: pointer;
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container" id="main-dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header" style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 0 20px 20px 20px;">
+                <img src="https://www.appsheet.com:443/fsimage.png?appid=35e5f9f7-248a-4eb4-a87e-672f26329edc&datasource=google&filename=DocId%3D17DO_wZowyRRcJ2RwJgieoOk-8rNKqraq&signature=531e139f3b6b655d2c117ff2508266b82e3eb3c280f0e627e9890cb549161cc8&tableprovider=google&userid=113051404" alt="Potato Logo" class="logo" style="max-width: 120px;">
+                <button id="close-sidebar-btn" style="display: none; background: none; border: none; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><a href="#achievement"><i class="fa-solid fa-trophy"></i> <span>Thành tựu</span></a></li>
+                <li class="nav-item"><a href="#challenge"><i class="fa-solid fa-bolt"></i> <span>Thách thức</span></a></li>
+                <li class="nav-item"><a href="#action"><i class="fa-solid fa-rocket"></i> <span>Kế hoạch 3 tháng</span></a></li>
+                <li class="nav-item"><a href="#vision"><i class="fa-solid fa-heart"></i> <span>Tầm nhìn & Tri ân</span></a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar" style="position: sticky; top: 0; z-index: 100; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);">
+                <button id="mobile-menu-btn" style="display: none;"><i class="fa-solid fa-bars"></i></button>
+                <div class="greeting-header" style="flex-grow: 1;">
+                    <h1 style="font-size: 1.6rem; color: var(--text-color); margin-bottom: 4px;">Tổng Kết 9 Tháng Đầu Năm 2026</h1>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Bài phát biểu của COO - Potato English Center</span>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=COO&background=8b5cf6&color=fff" alt="User">
+                    </div>
+                    <div class="user-info" style="display: flex; flex-direction: column;">
+                        <h4 style="margin: 0; font-size: 0.95rem;">COO</h4>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Ban Giám Đốc</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper" style="padding-top: 20px; max-width: 1200px; margin: 0 auto;">
+                
+                <!-- Hero section -->
+                <div style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); border-radius: var(--border-radius); padding: 40px; color: white; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2); position: relative; overflow: hidden;">
+                    <i class="fa-solid fa-quote-left" style="position: absolute; font-size: 120px; opacity: 0.1; top: -20px; left: 20px;"></i>
+                    <h2 style="font-size: 2rem; margin-bottom: 16px; position: relative; z-index: 1;">Mid-Year Review 2026</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.6; opacity: 0.9; max-width: 800px; position: relative; z-index: 1;">
+                        "Nhìn lại hành trình từ đầu năm Kick off đến đợt Mid-Year Review vừa qua, tập thể chúng ta đã xử lý một khối lượng công việc khổng lồ và đạt được những bước chuyển đổi rất đáng tự hào."
+                    </p>
+                </div>
+
+                <!-- Section 1 -->
+                <h2 id="achievement" style="margin-bottom: 24px; color: var(--text-color); font-size: 1.4rem; display: flex; align-items: center; gap: 10px;">
+                    <div style="background: var(--pastel-blue); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--info);">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    Đúc kết chặng đường đã qua: Thành tựu & Cột mốc
+                </h2>
+
+                <div class="metrics-grid" style="margin-bottom: 50px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+                    <!-- Tech -->
+                    <div class="metric-card card-blue panel" style="padding: 24px; flex-direction: column; align-items: stretch; justify-content: flex-start; height: auto;">
+                        <h3 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed rgba(0,0,0,0.1);">
+                            <i class="fa-solid fa-laptop-code" style="color: var(--info); margin-right: 8px;"></i> Công nghệ & Vận hành
+                        </h3>
+                        <ul style="list-style-type: none; padding-left: 0; line-height: 1.7; color: var(--text-muted); font-size: 0.95rem;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Potato App:</b> Tích hợp thành công tính năng tự động tạo lịch học và quản lý lộ trình.</span>
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Hệ thống Fees 2.0:</b> Chuẩn hóa theo dõi học phí theo cấu trúc Stage 8 buổi, tính năng in nhanh Notice và Bill ngay trên app. Hạn chế đếm ngày thủ công mỗi tháng.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Schedule & Fees:</b> Tự động tạo học phí và lịch học cho các lớp mới.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Academic -->
+                    <div class="metric-card card-purple panel" style="padding: 24px; flex-direction: column; align-items: stretch; justify-content: flex-start; height: auto;">
+                        <h3 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed rgba(0,0,0,0.1);">
+                            <i class="fa-solid fa-book-open" style="color: var(--primary-color); margin-right: 8px;"></i> Học thuật (Academic)
+                        </h3>
+                        <ul style="list-style-type: none; padding-left: 0; line-height: 1.7; color: var(--text-muted); font-size: 0.95rem;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Teacher Playbook:</b> Anh Khôi cùng đội ngũ đã hoàn thiện xuất sắc.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Roadmap:</b> Được bổ sung hoàn thiện phù hợp với các lớp.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Student -->
+                    <div class="metric-card card-orange panel" style="padding: 24px; flex-direction: column; align-items: stretch; justify-content: flex-start; height: auto;">
+                        <h3 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed rgba(0,0,0,0.1);">
+                            <i class="fa-solid fa-user-graduate" style="color: var(--warning); margin-right: 8px;"></i> Học viên (Student)
+                        </h3>
+                        <ul style="list-style-type: none; padding-left: 0; line-height: 1.7; color: var(--text-muted); font-size: 0.95rem;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Monthly Report:</b> Theo dõi kết quả học viên minh bạch hơn thông qua báo cáo hàng tháng.</span>
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Hệ thống Masterclass:</b> Theo dõi toàn diện về lớp học.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fa-solid fa-check-circle" style="color: var(--success); margin-top: 4px;"></i> 
+                                <span><b>Score:</b> Bảng tra cứu & in nhanh tiện lợi.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Culture -->
+                    <div class="metric-card card-green panel" style="padding: 24px; flex-direction: column; align-items: stretch; justify-content: flex-start; height: auto;">
+                        <h3 style="color: var(--text-color); font-size: 1.1rem; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px dashed rgba(0,0,0,0.1);">
+                            <i class="fa-solid fa-handshake" style="color: var(--success); margin-right: 8px;"></i> Văn hóa làm việc
+                        </h3>
+                        <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;">
+                            Chúng ta bắt đầu thẩm thấu mạnh mẽ các nguyên tắc quản trị mới vào thực tế công việc:
+                        </p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px;">
+                            <span style="background: var(--pastel-green); color: var(--success); padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><i class="fa-solid fa-envelope" style="margin-right: 5px;"></i> Weekly Email</span>
+                            <span style="background: var(--pastel-blue); color: var(--info); padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><i class="fa-solid fa-gauge-high" style="margin-right: 5px;"></i> Speed of Light</span>
+                            <span style="background: var(--pastel-purple); color: var(--primary-color); padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05);"><i class="fa-solid fa-bullseye" style="margin-right: 5px;"></i> The One Thing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <h2 id="challenge" style="margin-bottom: 24px; color: var(--text-color); font-size: 1.4rem; padding-top: 20px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px;">
+                    <div style="background: var(--pastel-orange); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--danger);">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    Bức tranh vĩ mô & Thách thức
+                </h2>
+                
+                <div class="panel" style="padding: 30px; margin-bottom: 50px; border-left: 4px solid var(--danger); background: linear-gradient(to right, rgba(239, 68, 68, 0.05), transparent);">
+                    <p style="color: var(--text-color); font-weight: 500; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+                        Tuy nhiên, bức tranh vận hành không chỉ có màu hồng. Nhìn ra bên ngoài, chúng ta đang đối mặt với một bối cảnh vĩ mô vô cùng khắc nghiệt:
+                    </p>
+                    <ul style="list-style-type: none; padding-left: 0; line-height: 1.8; color: var(--text-muted); font-size: 1rem;">
+                        <li style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fa-solid fa-chart-line" style="color: var(--danger); font-size: 1.2rem; margin-top: 4px;"></i> 
+                            <div>
+                                <b style="color: var(--text-color);">Kinh tế & Chính trị:</b> Khó khăn, bất ổn địa chính trị và những thay đổi liên tục về luật doanh nghiệp đang tạo ra những rào cản không nhỏ đối với sự phát triển.
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="fa-solid fa-robot" style="color: var(--primary-color); font-size: 1.2rem; margin-top: 4px;"></i> 
+                            <div>
+                                <b style="color: var(--text-color);">Làn sóng AI:</b> Sự bùng nổ đang thiết lập lại luật chơi, đòi hỏi thời đại bây giờ phải thích ứng và tiến hóa nhanh hơn bao giờ hết, với những kỳ vọng ngày càng khắt khe từ thị trường và Phụ huynh.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 3 -->
+                <h2 id="action" style="margin-bottom: 24px; color: var(--text-color); font-size: 1.4rem; padding-top: 20px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px;">
+                    <div style="background: var(--pastel-green); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--success);">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    Hành động quyết liệt trong 3 tháng tới
+                </h2>
+                <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 1.05rem;">
+                    Để bứt phá và giải quyết dứt điểm những điểm nóng còn tồn đọng, chúng ta phải mạnh tay hành động:
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-bottom: 50px;">
+                    <!-- Action 1 -->
+                    <div class="panel" style="padding: 24px; display: flex; gap: 20px; align-items: flex-start; transition: transform 0.2s; cursor: default;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background: #fee2e2; width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.2);">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: var(--danger); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; color: var(--text-color); margin-bottom: 10px;">1. Xử lý Kỷ luật thực thi yếu</h4>
+                            <p style="color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">
+                                Việc nhân sự nghỉ đột xuất dài hạn làm gãy luồng công việc. Đáng báo động nhất là tình trạng <span style="background: #fee2e2; color: var(--danger); padding: 2px 6px; border-radius: 4px; font-weight: 500;">sai sót học phí diễn ra liên tục</span>, ảnh hưởng trực tiếp đến uy tín của trung tâm và trải nghiệm của Phụ huynh.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Action 2 -->
+                    <div class="panel" style="padding: 24px; display: flex; gap: 20px; align-items: flex-start; transition: transform 0.2s; cursor: default;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background: var(--pastel-blue); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);">
+                            <i class="fa-solid fa-list-check" style="color: var(--info); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; color: var(--text-color); margin-bottom: 10px;">2. Nâng cao Quy trình & Chuyên môn</h4>
+                            <p style="color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">
+                                Tính chủ động của các bộ phận còn yếu: Monthly Report, Lesson Update, SOP còn phải chờ nhắc nhở. Việc chăm sóc & phản hồi tin nhắn của Phụ huynh còn nhiều thiếu sót cần chấn chỉnh ngay.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Action 3 -->
+                    <div class="panel" style="padding: 24px; display: flex; gap: 20px; align-items: flex-start; transition: transform 0.2s; cursor: default; grid-column: 1 / -1;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background: var(--pastel-purple); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(139, 92, 246, 0.2);">
+                            <i class="fa-solid fa-user-tie" style="color: var(--primary-color); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; color: var(--text-color); margin-bottom: 10px;">3. Bổ nhiệm Operation Leader</h4>
+                            <div style="color: var(--text-muted); line-height: 1.6; font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
+                                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px 16px; border-radius: 8px; display: flex; align-items: center; gap: 10px;">
+                                        <div style="width: 8px; height: 8px; background: var(--primary-color); border-radius: 50%;"></div>
+                                        <span><b>Khanh</b> - Quản lý cơ sở Ngô Quyền</span>
+                                    </div>
+                                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px 16px; border-radius: 8px; display: flex; align-items: center; gap: 10px;">
+                                        <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%;"></div>
+                                        <span><b>Duyên</b> - Quản lý cơ sở Hưng Định</span>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 8px;">
+                                    Hai bạn sẽ có <b>3 tháng</b> để chứng minh năng lực, trở thành trụ cột tháo gỡ trực tiếp các điểm nghẽn, đảm bảo luồng công việc vận hành trơn tru không bị đứt gãy. <br>
+                                    <i style="color: var(--primary-dark);">Anh cũng sẽ có mặt thường xuyên hơn để đồng hành cùng 2 Em.</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action 4 -->
+                    <div class="panel" style="padding: 24px; display: flex; gap: 20px; align-items: flex-start; transition: transform 0.2s; cursor: default; grid-column: 1 / -1;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background: var(--pastel-green); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.2);">
+                            <i class="fa-solid fa-gavel" style="color: var(--success); font-size: 1.5rem;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.15rem; color: var(--text-color); margin-bottom: 10px;">4. Chính sách thực thi quyết liệt</h4>
+                            <p style="color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">
+                                Từ nay, các vị trí Leader sẽ có thêm <b style="color: var(--text-color);">KPI cụ thể</b>. Chúng ta sẽ <span style="color: var(--danger); font-weight: 600;">thưởng phạt phân minh</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <h2 id="vision" style="margin-bottom: 24px; color: var(--text-color); font-size: 1.4rem; padding-top: 20px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px;">
+                    <div style="background: #fce7f3; width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #db2777;">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    Tầm nhìn & Lời Tri ân
+                </h2>
+                
+                <div class="panel" style="padding: 40px; background: linear-gradient(135deg, #fdf4ff 0%, #f3e8ff 100%); border: 1px solid #e9d5ff; border-radius: 20px; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.05); position: relative;">
+                    <i class="fa-solid fa-gem" style="position: absolute; top: 30px; right: 30px; font-size: 3rem; color: var(--primary-color); opacity: 0.1;"></i>
+                    
+                    <p style="color: var(--primary-dark); line-height: 1.8; margin-bottom: 30px; font-style: italic; font-size: 1.1rem; border-left: 4px solid var(--primary-color); padding-left: 20px;">
+                        "Thưa tất cả mọi người, giữa thời điểm kinh tế bấp bênh và sự cạnh tranh khốc liệt của thị trường và công nghệ, để C. Đào đã giúp Potato English có thể đứng vững suốt hơn 9 năm qua và tự tin bước sang tuổi thứ 10, Tập thể tiếp theo sẽ tiếp tục hành trình giúp 'Đứa con tinh thần' của C tiếp bước và phát triển."
+                    </p>
+                    
+                    <p style="color: var(--text-color); line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem;">
+                        <b style="color: #db2777; font-size: 1.15rem;">Ms. Đào</b>, ngay từ những ngày trung tâm mới sơ khai, tầm nhìn và tâm huyết của chị đã đặt xuống những viên gạch vững chắc nhất. Chị đã tạo ra một môi trường giáo dục không chỉ nghiêng về học thuật mà còn gắn kết trên khía cạnh tình cảm, giao tiếp. 
+                    </p>
+                    <p style="color: var(--text-color); line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem;">
+                        A chưa thấy một trung tâm nào có tâm hơn <b>"Potato"</b>. Đó cũng là lý do tại sao giữa muôn vàn cơ hội khác, và lịch làm việc kín A vẫn muốn sát cánh cùng Potato để phát triển tiếp.
+                    </p>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.7); border-radius: 12px; border: 1px dashed var(--primary-color);">
+                        <p style="color: var(--primary-dark); line-height: 1.8; font-weight: 600; margin: 0; text-align: center; font-size: 1.1rem;">
+                            Những kỷ niệm vượt khó cùng nhau để xây dựng nên cơ ngơi ngày hôm nay chính là di sản vô giá mà toàn thể đội ngũ thế hệ thứ 10 sẽ luôn trân trọng, gìn giữ và lấy đó làm ngọn lửa tiến về phía trước. <i class="fa-solid fa-fire" style="color: #f97316;"></i>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <footer style="text-align: center; margin-top: 80px; margin-bottom: 30px; color: var(--text-muted); font-size: 0.9rem; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <img src="https://www.appsheet.com:443/fsimage.png?appid=35e5f9f7-248a-4eb4-a87e-672f26329edc&datasource=google&filename=DocId%3D17DO_wZowyRRcJ2RwJgieoOk-8rNKqraq&signature=531e139f3b6b655d2c117ff2508266b82e3eb3c280f0e627e9890cb549161cc8&tableprovider=google&userid=113051404" style="height: 30px; opacity: 0.5; filter: grayscale(100%);">
+                    <div>&copy; 2026 Potato English Center. Nội bộ phát hành.</div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Scroll & Active state
+        document.querySelectorAll('.nav-menu a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                // Close mobile menu if open
+                const sidebar = document.getElementById('sidebar');
+                if(sidebar.classList.contains('show')) {
+                    sidebar.classList.remove('show');
+                }
+            });
+        });
+
+        // Highlight active menu on scroll
+        const sections = document.querySelectorAll('h2[id]');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            // Get current scroll position relative to main-content
+            const scrollY = document.querySelector('.main-content').scrollTop;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.querySelector('a').getAttribute('href').substring(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        }, true); // Use capture phase since scrolling happens in .main-content
+
+        // Mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('show');
+        });
+
+        document.getElementById('close-sidebar-btn').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('show');
+        });
+
+        // Add close button visibility logic for mobile
+        function checkMobile() {
+            if (window.innerWidth <= 768) {
+                document.getElementById('close-sidebar-btn').style.display = 'block';
+            } else {
+                document.getElementById('close-sidebar-btn').style.display = 'none';
+            }
+        }
+        window.addEventListener('resize', checkMobile);
+        checkMobile();
+    </script>
+</body>
+</html>
