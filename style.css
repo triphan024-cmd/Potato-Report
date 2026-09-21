@@ -948,18 +948,19 @@ body {
     box-shadow: 0 6px 16px rgba(0, 174, 239, 0.12);
 }
 
-.mini-stat-num {
-    font-size: 1.45rem;
-    font-weight: 900;
+.pillar-icon {
+    font-size: 1.25rem;
     color: var(--primary-color);
-    line-height: 1.1;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mini-stat-lbl {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: var(--text-slate-700);
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--text-slate-900);
     line-height: 1.25;
 }
 
@@ -976,6 +977,10 @@ body {
     border: 1.5px solid rgba(15, 23, 42, 0.08);
     box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
     padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
 }
 
 .motivation-leaders-stack .leader-card:hover {
@@ -983,6 +988,51 @@ body {
     border-color: var(--primary-color);
     box-shadow: 0 8px 20px rgba(0, 174, 239, 0.12);
     transform: translateY(-2px);
+}
+
+.leader-top-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.leader-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 54px;
+}
+
+.leader-duty-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-slate-700);
+    margin: 0;
+}
+
+.leader-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.leader-mini-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: #f0f9ff;
+    color: #0284c7;
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(0, 174, 239, 0.18);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.leader-mini-tag.tag-green {
+    background: #f0fdf4;
+    color: #15803d;
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 /* ==========================================================================
@@ -1382,6 +1432,10 @@ body {
 
     .motivation-mini-stats-row {
         gap: 8px;
+    }
+
+    .leader-details {
+        padding-left: 0;
     }
 
     .action-sub-grid {
